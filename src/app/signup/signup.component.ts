@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import {
@@ -8,23 +7,21 @@ import {
   FormsModule,
   ReactiveFormsModule,
 } from '@angular/forms';
-
+import { RouterLink } from '@angular/router';
 @Component({
-  selector: 'app-root',
+  selector: 'app-signup',
   standalone: true,
   imports: [
-    RouterOutlet,
     MatInputModule,
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
     RouterLink,
   ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  templateUrl: './signup.component.html',
+  styleUrl: './signup.component.scss',
 })
-export class AppComponent {
-  title = 'book-review';
+export class SignupComponent {
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
