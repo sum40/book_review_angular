@@ -8,6 +8,7 @@ import {
   FormsModule,
   ReactiveFormsModule,
 } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,9 @@ import {
     FormsModule,
     ReactiveFormsModule,
     RouterLink,
+    HttpClientModule,
   ],
+  providers: [HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="book-container">
+  <div class="top">
+    <div class="right">
+      <div class="name">Book Name: {{ book?.title }}</div>
+      <div class="name">Author: {{ book?.author }}</div>
+      <br />
+      <div class="title"><b>Tell something about the book</b></div>
+      <div class="rating-form">
+        <div class="form-group">
+          <mat-form-field class="example-full-width">
+            <mat-label>Write something.....</mat-label>
+            <textarea matInput placeholder="how's the book..."></textarea>
+          </mat-form-field>
+        </div>
+        <div class="btn-container">
+          <a
+            mat-raised-button
+            mat-button
+            color="primary"
+            style="margin-right: 50px"
+            routerLink="home"
+            >Submit</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
