@@ -4,6 +4,20 @@
     justify-content: center;
   }
 
+  .form {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    max-width: 800px;
+    margin: 2px auto 60px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+    // background: #c841dd1a;
+    border-radius: 50px;
+    //box-shadow: 0 4px 8px rgba(135, 11, 151, 0.632);
+  }
   .title {
     padding: 35px;
     font-size: 200%;

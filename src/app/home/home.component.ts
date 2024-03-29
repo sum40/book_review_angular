@@ -5,12 +5,13 @@ import { HeaderComponent } from '../header/header.component';
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, NgbRatingModule],
 })
 export class HomeComponent implements OnInit {
   trendingBooks: any;

@@ -9,7 +9,7 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     RouterLink,
     HttpClientModule,
+    NgbRatingModule,
   ],
   providers: [HttpClientModule],
   templateUrl: './app.component.html',
