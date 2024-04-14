@@ -7,39 +7,28 @@
       </div>
       <div class="books-thumbnail">
         <div class="book" *ngFor="let book of trendingBooks">
-          <div class="cover" (click)="goToBook('books', book.title)">
+          <div class="cover" (click)="goToBook('books', book._id)">
             <img [src]="book.imageLink" alt="" />
           </div>
           <div class="detail">
             <div class="name" (click)="goToBook('books', book.title)">
               {{ book.title }}
             </div>
+            <div class="name" (click)="goToBook('books', book.catagory)">
+              Catagory:
+              {{ book.catagory }}
+            </div>
             <div class="name" (click)="goToBook('books', book.author)">
               Author:
               {{ book.author }}
-            </div>
-            <div class="name" (click)="goToBook('books', book.year)">
-              Year:
-              {{ book.year }}
             </div>
             <div class="name" (click)="goToBook('books', book.language)">
               Language:
               {{ book.language }}
             </div>
-            <div class="rating">
-              <ng-template #t let-fill="fill">
-                <span class="star" [class.full]="fill === 100">
-                  <span class="half" [style.width.%]="fill">&hearts;</span
-                  >&hearts;
-                </span>
-              </ng-template>
-
-              <ngb-rating
-                [(rate)]="book.rating"
-                [starTemplate]="t"
-                [readonly]="true"
-                [max]="5"
-              />
+            <div class="name" (click)="goToBook('books', book.year)">
+              Year:
+              {{ book.year | date : "longDate" }}
             </div>
           </div>
         </div>

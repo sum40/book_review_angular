@@ -4,13 +4,14 @@
   background-color: #a914ce91;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   .logo {
     font-size: 30px;
     font-weight: bold;
     font-family: "Courier New", Courier, monospace;
     letter-spacing: 5px;
     margin-left: 60px;
+    margin-right: 100px;
     cursor: pointer;
   }
   .logout {
@@ -18,7 +19,7 @@
     font-weight: bold;
     font-family: "Courier New", Courier, monospace;
     letter-spacing: 3px;
-    margin-right: 40px;
+    margin-right: 10px;
     cursor: pointer;
   }
 }

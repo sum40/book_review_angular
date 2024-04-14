@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div class="input">
+  <form class="task-form" [formGroup]="bookForm" (ngSubmit)="addBook()">
+    <mat-form-field>
+      <mat-label>Book Title</mat-label>
+      <input matInput type="text" formControlName="title" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Book Catagory</mat-label>
+      <mat-select formControlName="catagory">
+        @for (catagory of catagoryOfBooks; track $index) {
+        <mat-option [value]="catagory">{{ catagory }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Author Name</mat-label>
+      <input matInput type="text" formControlName="author" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Book Cover</mat-label>
+      <input matInput type="text" formControlName="imageLink" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Language</mat-label>
+      <input matInput type="text" formControlName="language" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Publication Year</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="year" />
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>User Name</mat-label>
+      <input matInput type="text" formControlName="userDisplayName" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Book Review</mat-label>
+      <textarea matInput type="text" formControlName="review"> </textarea>
+    </mat-form-field>
+    <div class="shundor">
+      <button style="width: 100px; height: 30px" type="submit">Submit</button>
+    </div>
+  </form>
+</div>

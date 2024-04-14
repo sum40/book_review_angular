@@ -15,3 +15,6 @@ body {
 .sr-only {
   display: none !important;
 }
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";

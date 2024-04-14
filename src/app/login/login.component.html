@@ -7,68 +7,59 @@
   </head>
 
   <body background="/assets/img/bg5.jpg">
-    <form class="form">
-      <div>
+    <div>
+      <form class="form" [formGroup]="loginForm">
         <div>
-          <div class="title">
-            <p>
-              <b>Welcome To Book Review!!!</b>
-            </p>
-          </div>
-          <div class="login">
-            <P>
-              <b>Enter your information LogIn</b>
+          <div>
+            <div class="title">
+              <p>
+                <b>Welcome To Book Review!!!</b>
+              </p>
+            </div>
+            <div class="login">
+              <P>
+                <b>Enter your information LogIn</b>
+              </P>
+            </div>
+            <div class="input">
+              <div class="example-form">
+                <mat-form-field class="example-full-width">
+                  <mat-label><label for="pword">Email</label></mat-label>
+                  <input matInput type="text" formControlName="email" />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="input">
+              <div class="example-form">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Password</mat-label>
+                  <input matInput type="text" formControlName="password" />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="input">
+              <!-- <button mat-stroked-button type="submit">Log In</button> -->
+              <a
+                mat-raised-button
+                mat-button
+                color="primary"
+                style="margin: 50px"
+                (click)="login()"
+                >Submit</a
+              >
+            </div>
+            <div>
+              <br />
+            </div>
+            <P class="input">
+              <b>
+                Forgot password? <br />
+                Don't Have an account?&ensp;<a routerLink="signup">SignUp</a>
+              </b>
             </P>
           </div>
-          <div class="input">
-            <form class="example-form">
-              <mat-form-field class="example-full-width">
-                <mat-label>Email</mat-label>
-                <input
-                  type="email"
-                  matInput
-                  [formControl]="emailFormControl"
-                  placeholder="Ex. pat@example.com"
-                />
-                @if (emailFormControl.hasError('email') &&
-                !emailFormControl.hasError('required')) {
-                <mat-error><b>Please enter a valid email address</b></mat-error>
-                } @if (emailFormControl.hasError('required')) {
-                <mat-error>Email is <strong>required</strong></mat-error>
-                }
-              </mat-form-field>
-            </form>
-          </div>
-          <div class="input">
-            <form class="example-form">
-              <mat-form-field class="example-full-width">
-                <mat-label>Password</mat-label>
-                <input matInput type="text" />
-              </mat-form-field>
-            </form>
-          </div>
-          <div class="input">
-            <!-- <button mat-stroked-button type="submit">Log In</button> -->
-            <a
-              mat-raised-button
-              mat-button
-              color="primary"
-              style="margin: 50px"
-              routerLink="home"
-              >Submit</a
-            >
-          </div>
-          <div>
-            <br />
-          </div>
-          <P class="input">
-            <b>
-              Forgot password? <br />
-              Don't Have an account?&ensp;<a routerLink="signup">SignUp</a>
-            </b>
-          </P>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </body>
 </html>

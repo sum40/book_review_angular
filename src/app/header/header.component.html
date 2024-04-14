@@ -1,13 +1,21 @@
 <div class="header-container">
   <div class="logo">BOOK REVIEWS</div>
-  <!-- <div class="logout">
-    <a
-      mat-raised-button
-      mat-button
-      color="primary"
-      style="margin-right: 50px"
-      routerLink=""
-      >Logout</a
-    >
-  </div> -->
+  <div class="logout">
+    <button mat-raised-button color="primary" (click)="navigate('home')">
+      Home
+    </button>
+  </div>
+  <div class="logout">
+    <button mat-raised-button color="primary" (click)="navigate('add-book')">
+      Add Book
+    </button>
+  </div>
+  <div class="logout">
+    <button mat-raised-button color="primary" (click)="navigate('signup')">
+      Sign Up
+    </button>
+  </div>
+  <div class="logout">
+    <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+  </div>
 </div>

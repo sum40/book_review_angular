@@ -1,29 +1,68 @@
 <app-header></app-header>
 <div class="book-container">
-  <div class="top">
-    <div class="right">
-      <div class="name">Book Name: {{ book?.title }}</div>
-      <div class="name">Author: {{ book?.author }}</div>
-      <br />
-      <div class="title"><b>Tell something about the book</b></div>
-      <div class="rating-form">
+  <!-- <div class="top">
+    <div class="right"> -->
+  <mat-card class="example-card">
+    <mat-card-header>
+      <!-- <div mat-card-avatar class="example-header-image"></div> -->
+      <mat-card-title>Book Name: {{ book?.title }}</mat-card-title>
+      <mat-card-subtitle><b>Author: </b> {{ book?.author }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ book?.imageLink }}" style="height: 400px" />
+    <div class="book-grid">
+      <mat-card-content>
+        <p><b>User Name:</b> {{ book?.userDisplayName }}</p>
+        <br />
+        <p><b>Review:</b> {{ book?.review }}</p>
+      </mat-card-content>
+    </div>
+
+    <mat-card-actions>
+      <button mat-icon-button color="warn" (click)="deleteTask()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+
+    <div class="rating-form">
+      <form [formGroup]="commentForm">
         <div class="form-group">
           <mat-form-field class="example-full-width">
-            <mat-label>Write something.....</mat-label>
-            <textarea matInput placeholder="how's the book..."></textarea>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" />
           </mat-form-field>
         </div>
-        <div class="btn-container">
-          <a
-            mat-raised-button
-            mat-button
-            color="primary"
-            style="margin-right: 50px"
-            routerLink="home"
-            >Submit</a
-          >
+        <div class="form-group">
+          <mat-form-field class="example-full-width">
+            <mat-label>Write your comment here</mat-label>
+            <textarea
+              matInput
+              placeholder="comments about the book..."
+              formControlName="comment"
+            ></textarea>
+          </mat-form-field>
         </div>
+      </form>
+      <div class="btn-container">
+        <button
+          mat-raised-button
+          mat-button
+          color="primary"
+          style="margin-right: 50px"
+          (click)="saveComment()"
+        >
+          Submit
+        </button>
+      </div>
+
+      <div class="title"><b>All Comments Here</b></div>
+      <div class="book-grid" *ngFor="let rev of book?.comments">
+        <div class="book-card">
+          <b> Name: </b>{{ rev.userDisplayName }}
+          <br />
+          <b> Comments: </b>{{ rev.comment }}
+        </div>
+        <div class="book-iteam"></div>
       </div>
     </div>
-  </div>
+  </mat-card>
 </div>

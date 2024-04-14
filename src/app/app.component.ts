@@ -10,6 +10,13 @@ import {
 } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+// import { HttpClientTestingModule } from '@angular/common/http/testing';
+
+// beforeEach(() =>
+//   TestBed.configureTestingModule({
+//     imports: [HttpClientTestingModule],
+//   })
+// );
 @Component({
   selector: 'app-root',
   standalone: true,
