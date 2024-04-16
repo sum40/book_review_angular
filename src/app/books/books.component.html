@@ -1,10 +1,7 @@
 <app-header></app-header>
 <div class="book-container">
-  <!-- <div class="top">
-    <div class="right"> -->
   <mat-card class="example-card">
     <mat-card-header>
-      <!-- <div mat-card-avatar class="example-header-image"></div> -->
       <mat-card-title>Book Name: {{ book?.title }}</mat-card-title>
       <mat-card-subtitle><b>Author: </b> {{ book?.author }}</mat-card-subtitle>
     </mat-card-header>
@@ -54,8 +51,8 @@
         </button>
       </div>
 
-      <div class="title"><b>All Comments Here</b></div>
-      <div class="book-grid" *ngFor="let rev of book?.comments">
+      <div class="comment-title"><b>All Comments Here</b></div>
+      <div class="comment-box" *ngFor="let rev of book?.comments">
         <div class="book-card">
           <b> Name: </b>{{ rev.userDisplayName }}
           <br />

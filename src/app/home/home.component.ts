@@ -38,20 +38,6 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // ngOnInit(): void {
-  //   this.BookService.getAllTasks().subscribe((res) => {
-  //     this.trendingBooks = res;
-  //     console.log(this.trendingBooks);
-  //   });
-  // }
-
-  // getTrendingBooks() {
-  //   this.BookService.getAllTasks().subscribe((res) => {
-  //     this.trendingBooks = res;
-  //     console.log(this.trendingBooks);
-  //   });
-  // }
-
   goToBook(type: string, _id: string) {
     this.router.navigate(['books', type, _id]);
   }

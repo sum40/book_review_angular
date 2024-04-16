@@ -101,6 +101,6 @@ export class BooksComponent {
         console.error('Failed to update Comment:', error);
       }
     );
-    // window.location.reload();
+    window.location.reload();
   }
 }

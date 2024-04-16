@@ -3,10 +3,35 @@
   justify-content: center;
 
   .example-card {
-    max-width: 400px;
+    max-width: 500px;
   }
 
   .example-header-image {
     background-size: cover;
+  }
+  .example-full-width {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Allow vertical resizing */
+  }
+  .comment-title {
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .comment-box {
+    width: 100%;
+    max-width: 600px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the box horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
   }
 }
